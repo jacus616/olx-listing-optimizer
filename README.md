@@ -1,17 +1,17 @@
 # OLX Listing Optimizer
 
-Bot-safe SEO description generator for OLX.pl listings. Creates optimized titles and descriptions that rank well in OLX search while avoiding automated moderation triggers.
+Generator opisów ogłoszeń na OLX.pl — zoptymalizowany pod algorytmy wyszukiwania i bezpieczny dla automatycznej moderacji.
 
-## What it does
+## Co robi
 
-- Generates keyword-rich titles (70 char limit)
-- Creates structured descriptions with technical specs
-- Avoids moderation trigger words (spam, urgency, off-platform contact)
-- Optimized for OLX's NLP-based search algorithm
+- Tworzy tytuły z słowami kluczowymi (limit 70 znaków)
+- Generuje strukturalne opisy ze specyfikacją techniczną
+- Unika słów triggerujących moderację (spam, presja, kontakt poza platformą)
+- Zoptymalizowany pod algorytm NLP OLX
 
-## Usage
+## Użycie
 
-Load the skill and ask to write an OLX description for any product:
+Wczytaj skill i poproś o opis na OLX dla dowolnego produktu:
 
 ```
 "napisz opis na OLX dla Retroid Pocket Flip 2"
@@ -19,34 +19,34 @@ Load the skill and ask to write an OLX description for any product:
 "zoptymalizuj opis na OLX dla iPhone 13"
 ```
 
-## Skill structure
+## Struktura skilla
 
 ```
 .
-├── SKILL.md                          # Main skill definition
+├── SKILL.md                          # Definicja skilla
 └── references/
-    ├── moderation-safe-words.md      # Trigger words to avoid + safe alternatives
-    └── listing-templates.md          # Templates by product category
+    ├── moderation-safe-words.md      # Słowa do unikania + bezpieczne alternatywy
+    └── listing-templates.md          # Szablony per kategoria produktu
 ```
 
-## Supported categories
+## Obsługiwane kategorie
 
-- Gaming handhelds (Retroid, Anbernic, AYN, Miyoo, Steam Deck)
-- Retro consoles (PS1/2/3, SNES, N64, GameCube, Dreamcast)
-- Modern consoles (PS4, PS5, Switch, Xbox)
-- Phones & tablets
-- 3D printers
-- General electronics
+- Konsolki przenośne (Retroid, Anbernic, AYN, Miyoo, Steam Deck)
+- Konsole retro (PS1/2/3, SNES, N64, GameCube, Dreamcast)
+- Konsole nowoczesne (PS4, PS5, Switch, Xbox)
+- Telefony i tablety
+- Drukarki 3D
+- Elektronika ogólna
 
-## Key rules
+## Główne zasady
 
-1. **Title**: brand + model + key spec + condition (max 70 chars)
-2. **Description**: 400-1000 chars, structured with headers and bullet points
-3. **No trigger words**: okazja, hit, pilnie, caps lock, phone numbers, URLs
-4. **Natural language**: Polish phrasing, not machine-translated
-5. **Unique per listing**: never copy-paste identical descriptions
+1. **Tytuł**: marka + model + kluczowa specyfikacja + stan (max 70 znaków)
+2. **Opis**: 400-1000 znaków, strukturalny z nagłówkami i listami
+3. **Bez słów triggerujących**: okazja, hit, pilnie, caps lock, numery telefonów, URL-e
+4. **Naturalny język**: polski, nie maszynowe tłumaczenie
+5. **Unikalne ogłoszenia**: nigdy nie kopiuj identycznego opisu
 
-## Requirements
+## Wymagania
 
-- Hermes Agent with skill system
-- web_search for product specs research
+- Hermes Agent z systemem skilli
+- web_search do researchu specyfikacji produktu
